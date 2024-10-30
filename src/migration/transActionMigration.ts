@@ -7,8 +7,8 @@ import pool from "../config/database";
     const queryText = `
       CREATE TABLE IF NOT EXISTS transactions (
         id SERIAL PRIMARY KEY,
-        id_book SERIAL NOT NULL,
-        id_user SERIAL NOT NULL,
+        id_book INT NOT NULL,
+        id_user INT NOT NULL,
 
         FOREIGN KEY (id_user) REFERENCES users(id),
         FOREIGN KEY (id_book) REFERENCES books(id)
